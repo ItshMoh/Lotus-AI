@@ -18,7 +18,7 @@ def get_next_audio_frame_sounddevice(cobra_instance, audio_queue):
         numpy.ndarray: Audio frame as 16-bit PCM data
     """
     # Get audio frame from queue (blocks until available)
-    print("going to get next audio frame")
+    # print("going to get next audio frame")
     audio_frame = audio_queue.get()
     # print("audio frame",audio_frame)
     
@@ -31,7 +31,7 @@ def get_next_audio_frame_sounddevice(cobra_instance, audio_queue):
 
 def setup_sounddevice_stream(cobra_instance):
     """Setup sounddevice stream with callback."""
-    print("goiing to setup sounddevice stream")
+    # print("goiing to setup sounddevice stream")
     audio_queue = queue.Queue()
     # print("audio queue created",audio_queue)
     def audio_callback(indata, frames, time, status):
